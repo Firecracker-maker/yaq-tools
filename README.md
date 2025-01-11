@@ -1,1 +1,2 @@
-# data-toolkit
+# yaq-tools
+Yet Another Quant Tools
