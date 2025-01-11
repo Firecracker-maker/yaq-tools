@@ -25,10 +25,12 @@ Thank you for joining me on this journey—let’s explore and grow together!
 ``
 conda create -n yaqtools python=3.11 -y
 ``
+
 *activate*
 ``
 conda activate yaqtools
 ``
+
 *pip install via setup.py*
 ``
 pip install -e '.[all]' 
