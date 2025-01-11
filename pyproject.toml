@@ -1,0 +1,5 @@
+[build-system]
+# required for pip warning when running: pip install -e .[all]
+# note on mac you need the '' for the pacakges => pip install -e .'[all]'
+requires = ["setuptools >= 64"]
+build-backend = "setuptools.build_meta"
