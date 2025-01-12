@@ -5,7 +5,7 @@
 
 - [Welcome to yaq-tools](#welcome-to-yaq-tools)
 - [Intuitive Python Pacakge](#intuitive-python-package)
-- [Normalizing a Time Series of Data](#normalizing-a-time-series-of-data)
+- [Quality Controls](#quality-controls)
 - [Cheatsheet](#cheatsheet)
 
 # Welcome to yaq-tools
@@ -29,20 +29,19 @@ and effectiveness.
 
 Check out the `yaqtools/__init__` file to understand how we can simplify your imports.
 
+# Quality Controls
 
-# Normalizing a Time Series of Data
-## Problem statement
-Financial data has been a cornerstone of decision-making for decades. 
-As technology evolves, platforms must adapt to handle the growing complexity and 
-volume of data. Organizations face significant challenges in migrating, patching and 
-transforming data to align with new platforms, 
-which often requires extensive effort to ensure compatibility, consistency, and quality.
+For decades, financial data has been a critical foundation for decision-making. As technology advances, platforms must evolve to manage the increasing complexity and volume of data. Organizations face significant challenges when migrating, patching, and transforming data to align with modern platforms, often requiring substantial effort to ensure compatibility, consistency, and quality.
 
-We aim to build a system that efficiently processes, transforms, and manipulates files 
-to ensure seamless compatibility with evolving technologies.
+My goal is to develop a system that efficiently processes, transforms, manipulates and quality control files to ensure seamless integration with emerging technologies.
 
-## Features
-Here are series of problem you may face when building and normalizing a Time Series of Data
+To see an example in action, check out the scripts/demo_normalizing_data file, which demonstrates how robust data lakes can be built.
+
+Note: This is an early prototype intended to spark discussion. It currently lacks several key features, including:
+- Smart appending capabilities in Delta Lake
+- Iteration over date ranges
+- Support for step sequences defined in a configuration file (e.g., YAML)
+- And much more.
 
 
 ## Techonology used

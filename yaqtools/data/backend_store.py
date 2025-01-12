@@ -2,14 +2,15 @@
 Module to write in DeltaLake.
 """
 import getpass
-import shutil
 import os
+import shutil
+from datetime import date, datetime
+from pathlib import Path
+from typing import Any, List, Literal, Tuple, Union
+
 import pandas as pd
 import pyarrow as pa
-from typing import List, Union, Literal, Tuple, Any
-from datetime import datetime, date
-from pathlib import Path
-from deltalake import DeltaTable, write_deltalake, CommitProperties
+from deltalake import CommitProperties, DeltaTable, write_deltalake
 
 
 def init_metadata(
@@ -60,7 +61,16 @@ class StoreBackend:
 
         try:
             # create an Empty DeltaTable
-            DeltaTable.create(table_uri=path, custom_metadata=metadata)
+            DeltaTable.create(
+                table_uri=path,
+                schema=pa.schema(
+                    [
+                        pa.field("empty", pa.string()),
+                        pa.field("empty_binary", pa.binary(-1)),
+                    ]
+                ),
+                custom_metadata=metadata,
+            )
 
         except Exception as err:
             print(err)
