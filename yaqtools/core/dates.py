@@ -41,3 +41,17 @@ def to_utc_datetime(
         dt.replace(tzinfo=pytz.UTC)
 
     return dt
+
+
+def convert_epoch_time(timestamp: float):
+    """
+    Convert an Epoch Unix timestamp into a python Datetime Object.
+    Parameters
+    ----------
+    timestamp: timestamp to convert
+
+    Returns
+    -------
+
+    """
+    return datetime.fromtimestamp(timestamp, tz=pytz.UTC)
